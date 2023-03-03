@@ -1,0 +1,32 @@
+import chess, os, random
+
+#Variables
+board = chess.Board()
+move = board.legal_moves
+checkmate = board.is_checkmate()
+print(move)
+checkmate = False
+constant = 3
+#onemove = random.choice(move)
+#Game
+print(board)
+#print(onemove)
+while constant == 3:
+  x = input('What is your move?:\n\n')
+  #board.is_legal(x)
+  board.push_san(x)
+  print(board)
+    #f = input("Illegal move. Try again!!\n\n")
+    #board.is_legal(f)
+    #board.push_san(f)
+    #print(board)
+    
+  y = input("What is your opponents move?:")
+  board.push_san(y)
+  print(board)
+  os.system('clear')
+  print(move)
+  print(board)
+    
+  
+  
